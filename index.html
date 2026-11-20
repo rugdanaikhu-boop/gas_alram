@@ -14,7 +14,6 @@
         <div style="margin-top: 10px;">
             <div class="menu-item active" onclick="switchPage('page-1', this)"><span>📊</span> หน้าหลัก (Dashboard)</div>
             <div class="menu-item" onclick="switchPage('page-2', this)"><span>📡</span> อุปกรณ์ (Devices)</div>
-            <div class="menu-item" onclick="switchPage('page-3', this)"><span>📈</span> กราฟ (Analytics)</div>
             <div class="menu-item" onclick="switchPage('page-4', this)"><span>⚙️</span> ตั้งค่า (Settings)</div>
         </div>
     </div>
@@ -70,6 +69,14 @@
                     <small style="color: var(--text-gray);">ระบบจะบันทึกเมื่อค่าเกินกำหนด</small>
                 </div>
             </div>
+
+            <!-- กราฟแสดงแนวโน้มปริมาณควันในหน้า Dashboard -->
+            <div style="margin-top: 25px;">
+                <h3 style="margin-bottom: 15px; color: var(--text-dark);">กราฟแสดงแนวโน้มปริมาณควัน (Real-time)</h3>
+                <div class="chart-container">
+                    <canvas id="smokeChart"></canvas>
+                </div>
+            </div>
         </div>
 
         <!-- หน้า 2: Devices -->
@@ -90,14 +97,6 @@
                         <small id="device-status-text" style="font-weight: 500;">รอข้อมูลจากเซ็นเซอร์...</small>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- หน้า 3: Analytics -->
-        <div id="page-3" class="page">
-            <h3 style="margin-bottom: 15px; color: var(--text-dark);">กราฟแสดงแนวโน้มปริมาณควัน (Real-time)</h3>
-            <div class="chart-container">
-                <canvas id="smokeChart"></canvas>
             </div>
         </div>
 
